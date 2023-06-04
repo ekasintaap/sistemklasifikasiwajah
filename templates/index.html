@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Beauty Care Application</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='/images/logoapp2.png') }}">
+	<script src="https://kit.fontawesome.com/d347a5c9dc.js" crossorigin="anonymous"></script>
+
+	
+	<!-- Font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
+
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<!-- Navigation Bar -->
+	
+
+	<nav class="navbar navbar-expand-lg navbar-fixed-top">
+		<div class="container">
+			<img src={{ url_for('static', filename='/images/logoapp2.png') }} alt="Logo" 
+				width="80" height="50" align="left">
+			<a class="nav-link navbar-brand fw-bold text-xl py-3" href="#halamanku">&#160;  | Republic Beauty Care</a>
+		  <button class="navbar-toggler" style="background-color: #99627A" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right ms-auto">
+			  <li class="nav-item">
+				<a class="nav-link" aria-current="page" href="#informasi">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" aria-current="page" href="#about">About App</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#aplikasi">Klasifikasi</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#anggotaKelompok">About Us</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+
+	<!-- Navigation Bar -->
+
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid"  style: "background-color : #C88EA7">
+		<br>
+		<br>
+		<div class="row ">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h2 style="font-size: 46px;  line-height: 1.5; padding-top: 80px; color: #ffffff " >Halo Sobat, <br>
+					Mari deteksi penyakit<br>
+					pada kulit wajah anda.</h2>
+			
+				<br>
+
+				<!-- Tombol Mulai -->
+				<button id="navgo" type="button" class="btn btn-mulai btn-lg" style="background-color:"#ffffff";">
+					<a class="btn btn-default btn-lg display-2" href="#aplikasi" style="color: #643843; font-weight: 900">Deteksi Sekarang </a>
+				</button>
+
+			</div>
+			<div class="col-sm-12  col-md-6 col-lg-6">
+				<!-- Gambar Deskripsi Aplikasi -->
+				<div align="center" class="img-fluid" >
+					<img src={{ url_for('static', filename='/images/header.png') }} height="500"  style="padding: 0px 0px"></img>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Bagian About Aplikasi-->
+	<div id="about" class="about-container justify-content-center  ">
+		<br>
+		<br>
+		<h2 class=" text-center fw-bold" style= "color:#99627A"> TENTANG APLIKASI </h2>
+		<div class="row justify-content-center">
+			<div class="col-sm-6" >
+				<h3 class="py-4" style="color:#99627A;font-size: 24px;  line-height: 2; padding-top:60px">Aplikasi ini dapat mengklasifikasikan jenis penyakit pada kulit wajah yang kamu alami. 
+					<br>
+					Melalui aplikasi ini kamu juga dapat mengetahui bagaimana cara penanganan penyakit tersebut. </h3>
+			</div>
+			<div class="col-sm-4">
+				<div align="center" class="img-fluid" >
+					<img src={{ url_for('static', filename='/images/tentang_app.png') }}  style="padding: 0px 0px"></img>
+				</div>
+			</div>
+		</div>
+			<br>
+		<h3 class=" text-center fw-bold" style= "color:#99627A"> Dapat mengklasifikasikan 5 Macam Penyakit Pada Wajah</h3>
+		<div class="row  penyakit align-items-center text-center">
+			<div class="col-sm-4 jeni-penyakit text-center justify-content-center py-2 mx-5 mt-2">
+			  <h3 >Jerawat/Acne</h3>
+			</div>
+			<div class="col-sm-4 justify-content-center jeni-penyakit text-center py-2 mt-2">
+			  <h3 >Kemerahan/Rosacea</h3>
+			</div>
+			<div class="col-sm-4 justify-content-center jeni-penyakit mx-5 text-center py-2 mt-2">
+			  <h3 >Panu</h3>
+			</div>
+		</div>
+		<div class="row penyakit align-items-center text-center mt-2">
+			<div class="col-sm-6 justify-content-center jeni-penyakit mx-5 text-center py-2 ">
+			  <h3 >Flek Hitam</h3>
+			</div>
+			<div class="col-sm-6 justify-content-center jeni-penyakit text-center py-2 mt-2">
+			  <h3>Kulit Sehat</h3>
+			</div>
+		</div>
+		  
+	</div>
+
+	<br>
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<h2 class=" text-center fw-bold" style= "color:#FFFFFF"> APLIKASI KLASIFIKASI </h2>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<label for="input_gambar" class="my-button">
+				  Unggah Gambar
+				  <input id="input_gambar" type="file" style="display: none;">
+				</label>
+			  </div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 " style="text-align: center">
+				<br>
+				<!-- Tombol Prediksi -->
+				<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg btn-submit" style="text-align: center">Prediksi</button>
+				<br>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row text-center justify-content-center">
+			<div class="col-sm-3 col-lg-3 col-md-3text-center mx-auto">
+				<div align="center" class="img-fluid" >
+					<img src={{ url_for('static', filename='/images/orang_hasil.png') }}  style="padding: 0px px"></img>
+				</div>
+            </div>
+			<div class=" col-sm-8 col-lg-8 col-md-8 text-center justify-content-center">
+				<div class="card hasilpredict text-center px-2" style="max-width: 32rem; min-width:20rem">
+					<div class="card-body">
+					  <!-- Bagian Halaman untuk Hasil Prediksi -->
+					<div align="center" style="color:#99627A">
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+						<h3 style='color:#99627A; font-size:18px'> Hasil Prediksi </h3>
+						<br>
+						<img id="gambar_prediksi" src='/static/images/default-img.jpg'  class='img-border-radius' width='200'>
+						<h4 id="hasil_prediksi" style='color:#99627A'>Silahkan masukkan file gambar (.jpg)</h4>
+					</div>
+					</div>
+				  </div>				
+            </div>
+		</div>
+	</div>
+
+	</br>
+
+	<!-- Bagian Cara Mengatasi-->
+	<div class="mengatasi-container  justify-content-center">
+		<br>
+		<h2 class=" text-center fw-bold" id="jenis" > CARA MENGATASI JERAWAT </h2>
+		<div class="row text-justify justify-content-center">
+			<div class="col-sm-8" >
+				<h4 class="font-mengatasi" style="font-weight:700" id="mengatasi">1.<span style="color: red;">Membersihkan kulit secara teratur:</span>Rajin membersihkan kulit wajah dua kali sehari dengan pembersih yang lembut dapat membantu menghilangkan minyak berlebih, kotoran, dan bakteri yang dapat menyebabkan jerawat. <br>  2. <span style="color: red;">	Hindari menyentuh wajah dengan tangan yang kotor: </span> Tangan yang kotor dapat mengandung kuman dan bakteri yang dapat memperburuk jerawat. Hindarilah menyentuh wajah secara berlebihan dan pastikan tangan dalam keadaan bersih saat menyentuh wajah. <br>  3.	<span style="color: red;"> Gunakan produk perawatan kulit yang sesuai: </span> Pilih produk perawatan kulit yang cocok untuk jenis kulit Anda. Hindari produk yang mengandung bahan iritan atau komedogenik yang dapat menyumbat pori-pori dan memperburuk jerawat. <br>   4. <span style="color: red;">	Hindari memencet atau menggaruk jerawat: </span> Memencet atau menggaruk jerawat dapat menyebabkan peradangan yang lebih parah, meninggalkan bekas luka, dan memperluas infeksi. <br>   5. <span style="color: red;">	Gunakan produk yang mengandung bahan aktif seperti asam salisilat atau benzoyl peroxide: </span> Bahan-bahan ini dapat membantu mengurangi produksi minyak berlebih, mengurangi peradangan, dan membunuh bakteri penyebab jerawat. <br>   6. <span style="color: red;">	Jaga pola makan sehat: </span> Konsumsi makanan yang seimbang, kaya akan nutrisi, dan rendah gula serta makanan berlemak dapat membantu menjaga kesehatan kulit. <br>   7.	<span style="color: red;">Hindari paparan sinar matahari berlebih: </span> Paparan sinar matahari berlebih dapat meningkatkan produksi minyak dan peradangan kulit. Gunakan tabir surya dengan SPF yang sesuai dan hindari terlalu lama berada di bawah sinar matahari langsung. <br>   8. <span style="color: red;">	Kurangi stres: </span> Stres dapat memicu produksi hormon yang dapat meningkatkan produksi minyak dan menyebabkan jerawat. Cari cara untuk mengelola stres, seperti dengan olahraga, meditasi, atau kegiatan yang menenangkan <br>   9. <span style="color: red;">	Jaga kebersihan benda yang sering bersentuhan dengan wajah: </span> Benda-benda seperti handuk, bantal, atau telepon seluler dapat menjadi sarang bakteri yang dapat memperburuk jerawat. Pastikan untuk menjaga kebersihan benda-benda ini secara teratur. <br>   10.	<span style="color: red;">Konsultasikan dengan dokter atau ahli dermatologi: </span> Jika jerawat Anda parah atau tidak kunjung membaik dengan perawatan mandiri, sebaiknya konsultasikan dengan dokter atau ahli dermatologi. Mereka dapat memberikan saran dan perawatan yang lebih khusus sesuai dengan kondisi kulit Anda.</h4>
+			</div>
+			<div class="col-sm-2">
+				<div align="center" class="img-fluid" >
+					<img src={{ url_for('static', filename='/images/orang_mengatasi.png') }}  style="padding: 0px 0px"></img>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+		<!--
+		<h2 class=" text-center fw-bold" style= "color:#99627A"> TENTANG APLIKASI </h2>
+		<div class="row justify-content-center">
+			<div class="col-sm-6" >
+				<h3 class="py-4" style="color:#99627A;font-size: 18px;  line-height: 1.5; padding-top:40px">Aplikasi ini dapat mengklasifikasikan jenis penyakit pada kulit wajah yang kamu alami. 
+					<br>
+					Melalui aplikasi ini kamu juga dapat mengetahui bagaimana cara penanganan penyakit tersebut. </h3>
+			</div>
+			<div class="col-sm-4">
+				<div align="center" class="img-fluid" >
+					<img src={{ url_for('static', filename='/images/tentang_app.png') }}  style="padding: 0px 0px"></img>
+				</div>
+			</div>
+
+		</div>
+	-->
+
+	</br>
+	</br>
+	</br>
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="anggotaKelompok" class=" text-center container-team justify-content-center">
+		<br>
+		<h2 style= "color:#ffffff">ABOUT US</h2>
+		<h4>Republic Team</h4>
+		<br>
+		<div class="row   justify-content-center">
+		  <div class="col-md-2 col-sm-4 text-center mx-2">
+			<div class="team-member">
+			  <img src={{ url_for('static', filename='/images/HAFIS.png') }} alt="Anggota Tim 1">
+			  <h4 >Muhammad Hafis Zikri</h4>
+			  <h3 >As Modelling</h3>
+			  <div class="social-icons mx-3">
+				<a href="#"><i class="fab fa-instagram mx-3" style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-linkedin"style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-github mx-3" style="color:white; font-size: 18px"></i></a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-2 col-sm-4 text-center ">
+			<div class="team-member">
+			  <img src={{ url_for('static', filename='/images/anggun.png') }} alt="Anggota Tim 2">
+			  <h4 >Anggun Tri Utami</h4>
+			  <h3 >As Project Manager</h3>
+			  <div class="social-icons mx-3">
+				<a href="https://www.instagram.com/gn.ptr_/"><i class="fab fa-instagram mx-3" style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-linkedin"style="color:white; font-size: 18px"></i></a>
+				<a href="https://github.com/gnptr"><i class="fab fa-github mx-3" style="color:white; font-size: 18px"></i></a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-2 col-sm-4 text-center mx-2">
+			<div class="team-member">
+			  <img src={{ url_for('static', filename='/images/eka.png') }} alt="Anggota Tim 3">
+			  <h4 >Eka Sinta Aprilia</h4>
+			  <h3 >As FrontEnd Developer</h3>
+			  <div class="social-icons mx-3">
+				<a href="https://www.instagram.com/ekasintaaprilia/"><i class="fab fa-instagram mx-3" style="color:white; font-size: 18px"></i></a>
+				<a href="https://www.linkedin.com/in/eka-sinta-aprilia-819925174/"><i class="fab fa-linkedin"style="color:white; font-size: 18px"></i></a>
+				<a href="https://github.com/ekasintaap"><i class="fab fa-github mx-3" style="color:white; font-size: 18px"></i></a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-2 col-sm-4 text-center">
+			<div class="team-member">
+			  <img src={{ url_for('static', filename='/images/fadya.png') }} alt="Anggota Tim 4">
+			  <h4 >Fadya Iska Putri</h4>
+			  <h3 >As Dataset Researcher</h3>
+			  <div class="social-icons mx-3">
+				<a href="#"><i class="fab fa-instagram mx-3" style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-linkedin"style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-github mx-3" style="color:white; font-size: 18px"></i></a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-2 col-sm-4 text-center mx-2">
+			<div class="team-member">
+			  <img src={{ url_for('static', filename='/images/ilham.png') }} style="margin-right: 0px" alt="Anggota Tim 5">
+			  <h4 >Muhammad Ilham Zayadi</h4>
+			  <h3 > As BackEnd Developer</h3>
+			  <div class="social-icons mx-3">
+				<a href="#"><i class="fab fa-instagram mx-3" style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-linkedin"style="color:white; font-size: 18px"></i></a>
+				<a href="#"><i class="fab fa-github mx-3" style="color:white; font-size: 18px"></i></a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	<!-- Footer -->
+	<footer class="text-center text-white" style="background-color: #E7CBCB; text-color:  #99627A">
+		
+		<div class="container">
+		  <!-- Section: Social media -->
+		  <h4 style="text-color:  #99627A"> Support by : 
+			<img src={{ url_for('static', filename='/images/logouin.png') }} alt="Logo" 
+				width="80" height="80" >
+			<img src={{ url_for('static', filename='/images/orbit_logo.jpg') }} alt="Logo" 
+				width="100" height="100" >
+		  </h4>
+		</div>
+		<!-- Grid container -->
+	  
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: #99627A; color:#ffffff">
+		  © <script>document.write(new Date().getFullYear());</script>
+		  | This website is made by Republic Team</i>
+		</div>
+		<!-- Copyright -->
+	  </footer>
+	
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }} ></scrip>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
